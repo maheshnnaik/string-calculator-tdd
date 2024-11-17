@@ -29,4 +29,7 @@ describe("StringCalculator", () => {
         expect(StringCalculator.add("//e\n1,2")).toBe(NaN);
     });
 
+    test("hanadle negtaive numbers", () => {
+        expect(() => StringCalculator.add("1,-2,3,-3")).toThrowError("negative numbers not allowed -2,-3");
+    });
 });
