@@ -17,4 +17,16 @@ describe("StringCalculator", () => {
         expect(StringCalculator.add("1\n2,3")).toBe(6);
     });
 
+    test("hanadle multiple numbers separated by custom delimiters", () => {
+        expect(StringCalculator.add("//;\n1;2")).toBe(3);
+    });
+
+    test("hanadle multiple numbers separated by custom delimiters", () => {
+        expect(StringCalculator.add("//e\n1e2")).toBe(3);
+    });
+
+    test("hanadle multiple numbers separated by custom delimiters", () => {
+        expect(StringCalculator.add("//e\n1,2")).toBe(NaN);
+    });
+
 });
